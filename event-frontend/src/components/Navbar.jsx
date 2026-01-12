@@ -58,22 +58,25 @@ const Navbar = () => {
           {/* Services Dropdown */}
 
           <li className="group relative cursor-pointer">
-            <a href="#" className="flex items-center gap-[20px] py-2">
+            <ul
+              href="#"
+              className="flex items-center gap-2 py-2 text-white no-underline hover:text-white"
+            >
               Services
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
-            </a>
+            </ul>
             <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black">
               <ul>
                 {DropdownLinks.map((data) => (
                   <li key={data.id}>
-                    <a
+                    <ul
                       href={data.link}
-                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                      className="block w-full rounded-md px-3 py-2 text-sm text-gray-700 no-underline hover:bg-gray-100 hover:text-black transition"
                     >
                       {data.name}
-                    </a>
+                    </ul>
                   </li>
                 ))}
               </ul>
