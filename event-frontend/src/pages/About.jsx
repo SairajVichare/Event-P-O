@@ -33,8 +33,8 @@ const About = () => {
               </h1>
 
               <p className="text-gray-200 text-lg leading-relaxed">
-                We design unforgettable experiences with creativity,
-                precision and passion.
+                We design unforgettable experiences with creativity, precision
+                and passion.
               </p>
             </div>
 
@@ -64,9 +64,9 @@ const About = () => {
               Trupp & Fest
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Trupp & Fest is a one-stop solution for premium event
-              planning. From conceptualizing to execution, we bring
-              innovation, elegance, and perfection to every event.
+              Trupp & Fest is a one-stop solution for premium event planning.
+              From conceptualizing to execution, we bring innovation, elegance,
+              and perfection to every event.
             </p>
           </div>
         </div>
@@ -103,37 +103,26 @@ const About = () => {
             <p className="uppercase tracking-widest text-yellow-500 mb-3">
               The Founder
             </p>
-            <h2 className="text-4xl font-bold mb-6">
-              Utsav cha Aasiq
-            </h2>
+            <h2 className="text-4xl font-bold mb-6">Founder name</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              A passionate event planner with a vision to transform
-              moments into lifelong memories. Creativity and sincerity
-              define her journey.
+              A passionate event planner with a vision to transform moments into
+              lifelong memories. Creativity and sincerity define her journey.
             </p>
-            <p className="italic text-gray-500">
-              Founder, Trupp & Fest
-            </p>
+            <p className="italic text-gray-500">Founder, Trupp & Fest</p>
           </div>
 
-          <img
-            src={ownerImg}
-            alt="Founder"
-            className="rounded-lg shadow-lg"
-          />
+          <img src={ownerImg} alt="Founder" className="rounded-lg shadow-lg" />
         </div>
       </section>
 
       {/* ================= SLIDE 5 : STATS + VISION (KALAKARI VERSION) ================= */}
       <section className="relative min-h-screen bg-gradient-to-b from-gray-100 to-white py-24 overflow-hidden">
-
         {/* Background Text (Design Element) */}
         <h1 className="absolute top-20 left-1/2 -translate-x-1/2 text-[120px] font-bold text-gray-200 opacity-20 select-none">
           TRUPP & FEST
         </h1>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-16">
-
           {/* ===== STAT BOXES ===== */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
             {[
@@ -161,7 +150,6 @@ const About = () => {
 
           {/* ===== VISION / MISSION BLOCK ===== */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-
             {/* LEFT */}
             <div className="space-y-14">
               <div className="relative pl-8">
@@ -171,8 +159,8 @@ const About = () => {
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
                   To become the most trusted event planning brand by
-                  transforming dreams into extraordinary real-life
-                  experiences with elegance and creativity.
+                  transforming dreams into extraordinary real-life experiences
+                  with elegance and creativity.
                 </p>
               </div>
 
@@ -182,8 +170,8 @@ const About = () => {
                   Our Philosophy
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  Every celebration deserves detail, emotion, and soul.
-                  We believe perfection lies in the smallest elements.
+                  Every celebration deserves detail, emotion, and soul. We
+                  believe perfection lies in the smallest elements.
                 </p>
               </div>
             </div>
@@ -196,9 +184,8 @@ const About = () => {
                   Our Mission
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  To deliver stress-free, seamless events by managing
-                  everything from ideation to execution with passion
-                  and professionalism.
+                  To deliver stress-free, seamless events by managing everything
+                  from ideation to execution with passion and professionalism.
                 </p>
               </div>
 
@@ -208,17 +195,14 @@ const About = () => {
                   Our Promise
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  We promise unforgettable moments, transparent
-                  communication, and experiences that live forever.
+                  We promise unforgettable moments, transparent communication,
+                  and experiences that live forever.
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
-
     </>
   );
 };
