@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       {/* ================= SLIDE 1 : HERO (UPGRADED) ================= */}
       <section
-        className="relative min-h-screen pt-[100px] flex items-center"
+        className="relative bg-fixed min-h-screen pt-[100px] flex items-center"
         style={{
           backgroundImage: `url(${contactBg})`,
           backgroundSize: "cover",
@@ -20,31 +20,25 @@ const Contact = () => {
             We’d love to hear from you
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Let’s Connect
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Let’s Connect</h1>
 
           <p className="text-lg text-gray-200 max-w-2xl mb-12">
-            Whether it’s a celebration, collaboration, or career —
-            we’re always ready to start a conversation.
+            Whether it’s a celebration, collaboration, or career — we’re always
+            ready to start a conversation.
           </p>
 
-          <div className="text-sm text-gray-300 tracking-widest">
-            SCROLL ↓
-          </div>
+          <div className="text-sm text-gray-300 tracking-widest">SCROLL ↓</div>
         </div>
       </section>
 
       {/* ================= SLIDE 2 : CONTACT INFO (UPGRADED) ================= */}
       <section className="min-h-screen bg-gray-50 flex items-center py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-16 w-full">
-
           <h2 className="text-4xl font-bold text-center mb-16">
             Reach Us Through
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
             {/* BUSINESS */}
             <InfoCard
               icon="📁"
@@ -92,7 +86,6 @@ const Contact = () => {
               text="info@truppfest.com"
               sub="We reply within 24 hrs"
             />
-
           </div>
         </div>
       </section>
@@ -100,24 +93,18 @@ const Contact = () => {
       {/* ================= SLIDE 3 : GET IN TOUCH (MODERNIZED) ================= */}
       <section className="min-h-screen bg-white flex items-center py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-16 w-full">
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-
             {/* LEFT TEXT */}
             <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Get in Touch
-              </h2>
+              <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Tell us about your event, idea, or query.
-                Our team will reach out to you with the
-                best possible solution.
+                Tell us about your event, idea, or query. Our team will reach
+                out to you with the best possible solution.
               </p>
             </div>
 
             {/* RIGHT FORM */}
             <form className="bg-gray-50 rounded-2xl shadow-xl p-10 grid grid-cols-1 gap-6">
-
               <input
                 type="text"
                 placeholder="Your Name"
@@ -149,9 +136,7 @@ const Contact = () => {
               >
                 Send Message
               </button>
-
             </form>
-
           </div>
         </div>
       </section>
@@ -160,8 +145,10 @@ const Contact = () => {
 };
 
 const InfoCard = ({ icon, title, text, sub }) => (
-  <div className="bg-white rounded-xl shadow-lg p-8 text-center
-                  hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+  <div
+    className="bg-white rounded-xl shadow-lg p-8 text-center
+                  hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+  >
     <div className="text-4xl mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-700 font-medium">{text}</p>

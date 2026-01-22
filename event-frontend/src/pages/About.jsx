@@ -8,7 +8,7 @@ const About = () => {
     <>
       {/* ================= SLIDE 1 : HERO ================= */}
       <section
-        className="relative min-h-screen pt-[100px] flex items-center"
+        className="relative bg-fixed min-h-screen pt-[100px] flex items-center"
         style={{
           backgroundImage: `url(${aboutBg})`,
           backgroundSize: "cover",
