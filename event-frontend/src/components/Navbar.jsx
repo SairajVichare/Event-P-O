@@ -4,26 +4,13 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { FaCaretDown } from "react-icons/fa";
 
 const DropdownLinks = [
-  {
-    id: 1,
-    name: "Trending Products",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Best Selling",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Top Rated",
-    link: "/#",
-  },
+  { id: 1, name: "Trending Products", link: "/#" },
+  { id: 2, name: "Best Selling", link: "/#" },
+  { id: 3, name: "Top Rated", link: "/#" },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openService, setOpenService] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -34,83 +21,87 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-      ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-black/70 backdrop-blur-md"
           : "bg-black/30 backdrop-blur-sm"
       }`}
     >
-      <nav className="max-w-7xl mx-auto h-[100px] flex items-center px-6 relative">
-        {/* LEFT MENU (Desktop) */}
-        <ul className="hidden md:flex w-1/3 items-center gap-10 text-white text-[16px] font-semibold tracking-wide">
-          <li>
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/about">
-              About Us
-            </Link>
-          </li>
+      <nav className="w-full h-[120px] flex items-center px-8 justify-start">
+        {/* LOGO - TOP LEFT */}
+        <Link to="/" className="flex items-center mr-[90px]">
+          <img
+            src="/src/assets/logo.png"
+            alt="Y & B event"
+            className="h-[115px] w-auto object-contain drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
+          />
+        </Link>
 
-          {/* Services Dropdown */}
+        {/* DESKTOP MENU */}
+        <div className="ml-20">
+          <ul className="hidden md:flex items-center gap-20 text-white text-[16px] font-semibold tracking-wide">
+            <li>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
 
-          <li className="group relative cursor-pointer">
-            <ul
-              href="#"
-              className="flex items-center gap-2 py-2 text-white no-underline hover:text-white"
-            >
-              Services
-              <span>
+            <li>
+              <Link to="/about" className="nav-link">
+                About Us
+              </Link>
+            </li>
+
+            {/* SERVICES DROPDOWN */}
+            <li className="group relative cursor-pointer">
+              <div className="flex items-center gap-1">
+                Services
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-              </span>
-            </ul>
-            <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black">
-              <ul>
-                {DropdownLinks.map((data) => (
-                  <li key={data.id}>
-                    <ul
-                      href={data.link}
-                      className="block w-full rounded-md px-3 py-2 text-sm text-gray-700 no-underline hover:bg-gray-100 hover:text-black transition"
-                    >
-                      {data.name}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
-        </ul>
+              </div>
 
-        {/* CENTER LOGO */}
-        <div className="absolute left-1/2 -translate-x-1/2 text-white text-center pointer-events-none">
-          <h1 className="text-2xl tracking-[0.3em] font-bold">TRUPP & FEST</h1>
+              <div className="absolute left-0 top-full mt-2 hidden group-hover:block w-[180px] rounded-md bg-white p-2 text-black shadow-lg">
+                {DropdownLinks.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={item.link}
+                    className="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 transition"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </li>
+
+            <li>
+              <Link to="/gallery" className="nav-link">
+                Gallery
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/reviews" className="nav-link">
+                Client Reviews
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/contact" className="nav-link">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </div>
 
-        {/* RIGHT MENU (Desktop) */}
-        <ul className="hidden md:flex w-1/3 ml-auto items-center gap-10 text-white text-[16px] font-semibold tracking-wide">
-          <li>
-            <Link className="nav-link" to="/gallery">
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/reviews">
-              Client Reviews
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/contact">
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+        <Link
+          to="/contact"
+          className="ml-40 hidden md:inline-flex rounded-full border border-yellow-400 px-6 py-3 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+        >
+          Book Event
+        </Link>
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden text-white text-3xl"
+          className="md:hidden ml-auto text-white text-3xl"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <FiX /> : <FiMenu />}
@@ -120,7 +111,7 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {mobileOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-md text-white">
-          <ul className="flex flex-col items-center gap-7 py-8 text-lg font-semibold tracking-wide">
+          <ul className="flex flex-col items-center gap-7 py-8 text-lg font-semibold">
             <li>
               <Link to="/" onClick={() => setMobileOpen(false)}>
                 Home
