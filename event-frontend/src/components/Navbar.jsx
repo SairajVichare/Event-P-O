@@ -4,9 +4,32 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { FaCaretDown } from "react-icons/fa";
 
 const DropdownLinks = [
-  { id: 1, name: "Trending Products", link: "/#" },
-  { id: 2, name: "Best Selling", link: "/#" },
-  { id: 3, name: "Top Rated", link: "/#" },
+  { id: 1, name: "BABY EVENTS", link: "/services/baby-events" },
+  { id: 2, name: "BIRTHDAY EVENTS", link: "/services/birthday-events" },
+  { id: 3, name: "DECOR & STYLING SERVICES", link: "/services/decorstyling-events" },
+  {
+    id: 4,
+    name: "ENTERTAINMENT SERVICES",
+    link: "/services/entertainment-events",
+  },
+  { id: 5, name: "ENTRY CONCEPTS (BRIDE / GROOM / COUPLE)", link: "/services/entry-events" },
+  {
+    id: 6,
+    name: "FESTIVAL & CULTURAL EVENTS",
+    link: "/services/festivalCultural-events",
+  },
+  {
+    id: 7,
+    name: "PERSONAL & PRIVATE EVENTS",
+    link: "/services/personalprivate-events",
+  },
+  {
+    id: 8,
+    name: "TECHNICAL & SPECIAL EFFECTS",
+    link: "/services/technicalspecial-events",
+  },
+  { id: 9, name: "THEME-BASED WEDDING CONCEPTS", link: "/services/themewedding-events" },
+  { id: 10, name: "WEDDING EVENTS", link: "/services/wedding-events" },
 ];
 
 const Navbar = () => {
@@ -59,7 +82,7 @@ const Navbar = () => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </div>
 
-              <div className="absolute left-0 top-full mt-2 hidden group-hover:block w-[180px] rounded-md bg-white p-2 text-black shadow-lg">
+              <div className="absolute left-0 top-full pt-2 hidden group-hover:block w-[180px] rounded-md bg-white p-2 text-black shadow-lg">
                 {DropdownLinks.map((item) => (
                   <Link
                     key={item.id}
