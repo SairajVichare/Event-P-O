@@ -2,17 +2,26 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaCaretDown } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 const DropdownLinks = [
   { id: 1, name: "BABY EVENTS", link: "/services/baby-events" },
   { id: 2, name: "BIRTHDAY EVENTS", link: "/services/birthday-events" },
-  { id: 3, name: "DECOR & STYLING SERVICES", link: "/services/decorstyling-events" },
+  {
+    id: 3,
+    name: "DECOR & STYLING SERVICES",
+    link: "/services/decorstyling-events",
+  },
   {
     id: 4,
     name: "ENTERTAINMENT SERVICES",
     link: "/services/entertainment-events",
   },
-  { id: 5, name: "ENTRY CONCEPTS (BRIDE / GROOM / COUPLE)", link: "/services/entry-events" },
+  {
+    id: 5,
+    name: "ENTRY CONCEPTS (BRIDE / GROOM / COUPLE)",
+    link: "/services/entry-events",
+  },
   {
     id: 6,
     name: "FESTIVAL & CULTURAL EVENTS",
@@ -28,7 +37,11 @@ const DropdownLinks = [
     name: "TECHNICAL & SPECIAL EFFECTS",
     link: "/services/technicalspecial-events",
   },
-  { id: 9, name: "THEME-BASED WEDDING CONCEPTS", link: "/services/themewedding-events" },
+  {
+    id: 9,
+    name: "THEME-BASED WEDDING CONCEPTS",
+    link: "/services/themewedding-events",
+  },
   { id: 10, name: "WEDDING EVENTS", link: "/services/wedding-events" },
 ];
 
@@ -54,7 +67,7 @@ const Navbar = () => {
         {/* LOGO - TOP LEFT */}
         <Link to="/" className="flex items-center mr-[90px]">
           <img
-            src="/src/assets/logo.png"
+            src={logo}
             alt="Y & B event"
             className="h-[115px] w-auto object-contain drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
           />
