@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 const TechnicalSpecialEffects = () => {
   return (
-    <div>TechnicalSpecialEffects</div>
+    <>
+      <ScrollToTopButton />
+      <div>TechnicalSpecialEffects</div>
+    </>
   )
 }
 

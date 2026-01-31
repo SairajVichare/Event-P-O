@@ -1,9 +1,217 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
+const containerVariant = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
+};
 
 const BabyEvents = () => {
   return (
-    <div>BabyEvents</div>
-  )
-}
+    <div className="w-full min-h-screen flex flex-col">
+      <ScrollToTopButton />
 
-export default BabyEvents
+      {/* HERO SECTION */}
+      <section
+        className="relative min-h-screen bg-cover bg-center flex items-center"
+        style={{
+          backgroundImage: "url('/images/baby-hero.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 max-w-6xl mx-auto px-6 text-white"
+        >
+          <p className="text-pink-300 uppercase tracking-widest mb-3">
+            Baby Event Planning
+          </p>
+
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Creating Precious Memories: <br />
+            Baby Celebration Experts
+          </h1>
+
+          <p className="mt-4 max-w-2xl text-gray-200">
+            We specialize in baby showers, naming ceremonies, cradle
+            ceremonies, and themed baby celebrations with beautiful décor
+            and joyful experiences.
+          </p>
+
+          <Link to="/contact">
+            <motion.button
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="mt-6 bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-md font-semibold"
+            >
+              Contact Us
+            </motion.button>
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* INTRO SECTION */}
+      <motion.section
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="min-h-[70vh] flex items-center"
+      >
+        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Baby Events Management
+          </h2>
+
+          <p className="text-gray-600 leading-8">
+            Celebrate your baby’s special milestones with our expert event
+            planning services. From décor to entertainment, we ensure a
+            joyful and stress-free experience for your family.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* SERVICES GRID */}
+      <section className="bg-gray-50 min-h-screen flex items-center">
+        <div className="max-w-6xl mx-auto px-6 py-16 w-full">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Our Services
+          </h2>
+
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-4 sm:grid-cols-2 gap-6"
+          >
+            {[
+              "Baby Shower Decoration",
+              "Naming Ceremony Setup",
+              "Theme Décor",
+              "Games & Activities",
+              "Return Gifts",
+              "Photography",
+              "Catering",
+              "Invitations",
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={itemVariant}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white shadow-md rounded-lg overflow-hidden"
+              >
+                <img
+                  src={`/images/baby-service${i + 1}.jpg`}
+                  alt=""
+                  className="h-40 w-full object-cover"
+                />
+                <div className="p-4 text-center font-semibold">
+                  {item}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="min-h-screen flex items-center"
+      >
+        <div className="max-w-6xl mx-auto px-6 py-16 w-full">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Baby Events Gallery
+          </h2>
+
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((img) => (
+              <motion.img
+                key={img}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                src={`/images/baby-gallery${img}.jpg`}
+                alt=""
+                className="rounded-lg shadow-md cursor-pointer"
+              />
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* WHY CHOOSE US */}
+      <section className="bg-gray-50 min-h-[70vh] flex items-center">
+        <div className="max-w-6xl mx-auto px-6 py-16 w-full">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose Us?
+          </h2>
+
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {["Creative Themes", "Professional Team", "Customized Events"].map((title, i) => (
+              <motion.div
+                key={i}
+                variants={itemVariant}
+                className="bg-white p-6 rounded-lg shadow text-center"
+              >
+                <h3 className="text-xl font-semibold mb-3">{title}</h3>
+                <p className="text-gray-600">
+                  We design joyful and memorable baby celebrations with love
+                  and attention to detail.
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="bg-pink-500 text-white py-16 text-center"
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          Let’s Celebrate Your Baby’s Special Day 🎈
+        </h2>
+
+        <Link to="/contact">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="bg-black px-6 py-3 rounded-md font-semibold hover:bg-gray-800"
+          >
+            Call Us Now
+          </motion.button>
+        </Link>
+      </motion.section>
+
+    </div>
+  );
+};
+
+export default BabyEvents;

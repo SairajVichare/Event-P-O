@@ -2,11 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import EventGallery from "./pages/EventGallery";
+import ClientReview from "./pages/ClientReview";
 import BabyEvents from "./pages/BabyEvents";
 import BirthdayEvents from "./pages/BirthdayEvents"
 import Decorstyling from "./pages/DecorStylingEvents"
@@ -23,6 +25,7 @@ import Wedding from "./pages/WeddingEvents"
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
@@ -31,6 +34,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/gallery/:eventType" element={<EventGallery />} />
+        <Route path="/reviews" element={<ClientReview />} />
 
 
         <Route path="/services/baby-events" element={<BabyEvents />} />

@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "../assets/HomeBackground.jpg";
 import aboutBg from "../assets/AboutInHome.jpeg";
 import leftImage from "../assets/leftImage.jpeg";
 import rightImage from "../assets/rightImage.jpeg";
 import faqBg from "../assets/faq-bg.jpg";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 import {
   FaRing,
   FaBirthdayCake,
@@ -104,6 +106,7 @@ const Home = () => {
 
   return (
     <>
+      <ScrollToTopButton />
       {/* Hero Section */}
       <section
         className="h-screen bg-fixed bg-cover bg-center flex items-center px-8 md:px-20 text-white"
@@ -132,9 +135,11 @@ const Home = () => {
             through thoughtful planning and flawless execution.
           </p>
 
-          <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-3 font-medium hover:bg-yellow-400 hover:text-black transition duration-300">
-            Contact Us
-          </button>
+          <Link to="/contact">
+            <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-3 font-medium hover:bg-yellow-400 hover:text-black transition duration-300">
+              Contact Us
+            </button>
+          </Link>
         </motion.div>
       </section>
 
@@ -159,9 +164,11 @@ const Home = () => {
             forever.
           </p>
 
-          <button className="bg-white text-black px-6 py-3 text-sm font-semibold hover:bg-gray-200 transition">
-            OUR STORY
-          </button>
+          <Link to="/about">
+            <button className="bg-white text-black px-6 py-3 text-sm font-semibold hover:bg-gray-200 transition">
+              OUR STORY
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -354,10 +361,12 @@ const Home = () => {
 
           {/* CTA Button */}
           <div className="mt-6 md:mt-0">
-            <button className="relative overflow-hidden border border-yellow-400 text-yellow-400 px-6 py-3 rounded-md text-sm font-medium transition">
-              <span className="absolute inset-0 bg-yellow-400 scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
-              <span className="relative hover:text-black">Contact Us</span>
-            </button>
+            <Link to="/contact">
+              <button className="relative overflow-hidden border border-yellow-400 text-yellow-400 px-6 py-3 rounded-md text-sm font-medium transition">
+                <span className="absolute inset-0 bg-yellow-400 scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
+                <span className="relative hover:text-black">Contact Us</span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>

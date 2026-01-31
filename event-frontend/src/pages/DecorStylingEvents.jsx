@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 const DecorStylingEvents = () => {
   return (
-    <div>DecorStylingEvents</div>
+    <>
+      <ScrollToTopButton />
+      <div>DecorStylingEvents</div>
+    </>
   )
 }
 

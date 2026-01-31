@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 const Service = () => {
   return (
-    <div>Service</div>
+    <>
+      <ScrollToTopButton />
+      <div>Service</div>
+    </>
   )
 }
 

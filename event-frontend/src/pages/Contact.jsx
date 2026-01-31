@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import contactBg from "../assets/aboutBg.jpg";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,6 +40,7 @@ const Contact = () => {
 
   return (
     <>
+      <ScrollToTopButton />
       {/* ================= SLIDE 1 : HERO ================= */}
       <section
         className="relative min-h-screen pt-[100px] flex items-center bg-fixed"

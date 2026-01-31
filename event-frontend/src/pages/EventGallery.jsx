@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import galleryData from "../data/galleryData";
 import { motion } from "framer-motion";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const EventGallery = () => {
   const { eventType } = useParams();
@@ -16,6 +17,7 @@ const EventGallery = () => {
 
   return (
     <>
+      <ScrollToTopButton />
       {/* ================= HERO SECTION ================= */}
       <section
         className="h-screen relative flex items-center justify-center"

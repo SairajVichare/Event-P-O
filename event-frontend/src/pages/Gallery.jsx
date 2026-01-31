@@ -1,10 +1,13 @@
 import galleryData from "../data/galleryData";
 import GalleryPreviewCard from "../components/GalleryPreviewCard";
 import galleryBg from "../assets/backgrounds/gallery-bg.jpg";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Gallery = () => {
   return (
-    <section
+    <>
+      <ScrollToTopButton />
+      <section
       className="relative min-h-screen pt-32 pb-24 bg-cover bg-center"
       style={{ backgroundImage: `url(${galleryBg})` }}
     >
@@ -26,6 +29,7 @@ const Gallery = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 const EntertainmentEvents = () => {
   return (
-    <div>EntertainmentEvents</div>
+    <>
+      <ScrollToTopButton />
+      <div>EntertainmentEvents</div>
+    </>
   )
 }
 
