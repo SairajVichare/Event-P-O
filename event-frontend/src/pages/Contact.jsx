@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import contactBg from "../assets/aboutBg.jpg";
+
+import contactBg from "../assets/backgrounds/aboutBg.jpg";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Contact = () => {

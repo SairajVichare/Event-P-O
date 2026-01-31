@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/HomeBackground.jpg";
-import aboutBg from "../assets/AboutInHome.jpeg";
+
+import heroImage from "../assets/backgrounds/HomeBackground.jpg";
+import aboutBg from "../assets/backgrounds/AboutInHome.jpeg";
 import leftImage from "../assets/leftImage.jpeg";
 import rightImage from "../assets/rightImage.jpeg";
 import faqBg from "../assets/faq-bg.jpg";

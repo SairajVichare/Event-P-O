@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaCaretDown } from "react-icons/fa";
 import logo from "../assets/logo.png";
@@ -95,15 +95,22 @@ const Navbar = () => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </div>
 
-              <div className="absolute left-0 top-full pt-2 hidden group-hover:block w-[180px] rounded-md bg-white p-2 text-black shadow-lg">
+              <div className="  absolute left-0 top-full pt-2 hidden group-hover:block w-[300px] rounded-xl bg-white p-4 text-black shadow-xl">
                 {DropdownLinks.map((item) => (
-                  <Link
+                  <NavLink
                     key={item.id}
                     to={item.link}
-                    className="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 transition"
+                    className={({ isActive }) =>
+                      `block rounded-md px-4 py-2 text-sm transition
+                     ${
+                        isActive
+                          ? "bg-yellow-100 text-yellow-600 font-semibold"
+                          : "hover:bg-gray-100"
+                      }`
+                    }
                   >
                     {item.name}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
             </li>

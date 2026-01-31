@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import aboutBg from "../assets/aboutBg.jpg";
+import aboutBg from "../assets/backgrounds/aboutBg.jpg";
 import ownerImg from "../assets/ownerImg.png";
 import { motion } from "framer-motion";
 import ScrollToTopButton from "../components/ScrollToTopButton";
