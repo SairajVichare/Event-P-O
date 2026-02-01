@@ -155,7 +155,7 @@ const Home = () => {
 
       {/* ===================== HERO ===================== */}
       <section
-        className="min-h-screen pt-[105px] bg-fixed bg-cover bg-center flex items-center px-8 md:px-20 text-white"
+        className="min-h-screen pt-[105px] bg-scroll md:bg-fixed bg-cover bg-center flex items-center px-8 md:px-20 text-white"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${heroImage})`,
         }}
@@ -194,7 +194,7 @@ const Home = () => {
 
       {/* ===================== ABOUT ===================== */}
       <section
-        className="h-screen bg-fixed bg-cover bg-center flex items-center justify-end px-6 md:px-20"
+        className=" min-h-screen bg-scroll md:bg-fixed bg-cover bg-center flex items-center md:items-center justify-end py-20 md:py-0 px-6 md:px-20"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${aboutBg})`,
         }}
