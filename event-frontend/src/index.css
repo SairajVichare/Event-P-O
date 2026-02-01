@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+.nav-link {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #facc15; /* Tailwind yellow-400 */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
