@@ -1,0 +1,9 @@
+# Track large image files with Git LFS
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+
+# Specifically track large files
+logo.png filter=lfs diff=lfs merge=lfs -text
+HomeBackground.jpg filter=lfs diff=lfs merge=lfs -text
+weddingEvents/8.jpg filter=lfs diff=lfs merge=lfs -text
