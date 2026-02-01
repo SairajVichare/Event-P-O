@@ -83,7 +83,7 @@ const galleryData = [
   },
 
   {
-    type: "wedding",
+    type: "festival & cultural",
     title: "Festival & Cultural Events",
     images: [f4, f2, f7, f3, f5, f6, f1, f8, f9, f10, f11, f12],
   },
