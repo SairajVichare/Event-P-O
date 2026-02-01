@@ -358,7 +358,7 @@ const Home = () => {
 
       {/* ===================== CTA ===================== */}
       <section
-        className="relative max-w-7xl mx-auto mt-24 rounded-[2.5rem] overflow-hidden bg-cover bg-center shadow-2xl"
+        className=" relative max-w-7xl mx-auto mt-24 rounded-[2.5rem] overflow-hidden bg-cover bg-center shadow-2xl pt-[110px] md:pt-0 "
         style={{
           backgroundImage: `
       linear-gradient(
@@ -374,7 +374,7 @@ const Home = () => {
         <div className="absolute -top-20 -right-20 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl"></div>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 px-10 md:px-16 py-24 text-white">
+        <div className="relative flex flex-col md:flex-row items-center justify-between gap-10 px-10 md:px-16 py-15 text-white">
           {/* LEFT CONTENT */}
           <div className="max-w-xl">
             <p className="text-yellow-400 tracking-[0.3em] text-sm font-semibold mb-4">
